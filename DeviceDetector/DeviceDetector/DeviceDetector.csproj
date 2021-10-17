@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Yaroslav08.DeviceDetector</PackageId>
+    <Authors>Yaroslav08</Authors>
   </PropertyGroup>
 
   <ItemGroup>
