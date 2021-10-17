@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace DeviceDetector.Extensions
 {
@@ -7,8 +6,8 @@ namespace DeviceDetector.Extensions
     {
         public static void AddDeviceDetector(this IServiceCollection services)
         {
-            services.AddSingleton(ServiceDescriptor.Singleton<IHttpContextAccessor, HttpContextAccessor>());
-            services.AddTransient<IDetector, Detector>();
+            services.AddHttpContextAccessor();
+            services.AddScoped<IDetector, Detector>();
         }
     }
 }
